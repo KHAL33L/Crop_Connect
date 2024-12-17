@@ -1,0 +1,374 @@
+/* General body setup */
+:root {
+    --dark-grey: #333;
+    --medium-grey: #2d2d2d;
+    --light-grey: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-grey);
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--medium-grey);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: #81d01a;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #81d01a;
+}
+
+.login a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.login a:hover {
+    color: #81d01a;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+.home-container {
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--light-grey);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    color: #fff;
+}
+
+.modal-content h3 {
+    color: #81d01a;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--medium-grey);
+    border-radius: 5px;
+    background-color: var(--medium-grey);
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input[type="file"] {
+    color: #fff;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-btn, .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn {
+    background-color: #81d01a;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background-color: #6a9c28;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+/* Filters Section */
+.filters-section {
+    background-color: var(--light-grey);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-form {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+
+.search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.search-box button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+}
+
+.filter-options select {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Create Post Button */
+.create-post-btn {
+    background-color: #81d01a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.create-post-btn:hover {
+    background-color: #6a9c28;
+}
+
+/* Posts Section */
+.posts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-card {
+    background-color: var(--light-grey);
+    border: 1px solid var(--medium-grey);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.post-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.post-header {
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 1.5em;
+    color: #81d01a;
+    margin-bottom: 5px;
+}
+
+.post-meta {
+    display: flex;
+    gap: 15px;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.post-excerpt {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.post-image-indicator {
+    display: flex;
+    align-items: center;
+    color: #81d01a;
+    font-size: 24px;
+}
+
+.no-posts {
+    text-align: center;
+    color: #ddd;
+    padding: 40px;
+    background-color: var(--light-grey);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--medium-grey);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #81d01a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #6a9c28;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .filters-section {
+        flex-direction: column;
+    }
+
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .post-card {
+        flex-direction: column;
+    }
+
+    .post-content {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .post-image-indicator {
+        justify-content: flex-start;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20px;
+        padding: 20px;
+    }
+}
